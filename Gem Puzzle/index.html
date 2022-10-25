@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle 15</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      canvas {
+        border: 2px solid #000;
+      }
+      canvas:hover {
+        cursor: pointer;
+      }
+      .game-container--stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+      }
+      #time,
+      #moves {
+        text-align: center;
+      }
+      .sizeFieldIndex {
+        width: fit-content;
+        margin: 0 10px;
+        cursor: pointer;
+        border-bottom: 1px solid;
+      }
+      .sizeFieldIndex:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      #sizeField {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <div id="sizeField">
+        <p id="threefield" class="sizeFieldIndex" data-size="3">3x3</p>
+        <p id="fourfield" class="sizeFieldIndex" data-size="4">4x4</p>
+        <p id="fivefield" class="sizeFieldIndex" data-size="5">5x5</p>
+        <p id="sixfield" class="sizeFieldIndex" data-size="6">6x6</p>
+      </div>
+      <div class="game-container--stats">
+        <div id="time">
+          <h3>Time: 0s</h3>
+        </div>
+        <div id="moves">
+          <h3>Moves: 0</h3>
+        </div>
+      </div>
+      <canvas id="game" width="600" height="600"></canvas>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
